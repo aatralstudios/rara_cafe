@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Phone, MapPin } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon, SteamWisp } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const FinalCTA: React.FC = () => {
   const phone = '088087 01617';
@@ -21,7 +22,7 @@ export const FinalCTA: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <ScrollReveal animation="zoom-in" duration={800} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         {/* Steam Animation */}
         <div className="mb-4">
@@ -77,7 +78,7 @@ export const FinalCTA: React.FC = () => {
           1/413, Natesan Avenue, Rajiv Gandhi Salai, Karappakkam, Chennai 600097
         </p>
 
-      </div>
+      </ScrollReveal>
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, Flame } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 interface CounterItem {
   id: string;
@@ -79,7 +80,7 @@ export const SnackCounter: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header with Physical Café Board Aesthetic */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-white/10 gap-4">
+        <ScrollReveal animation="fade-up" duration={700} className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-white/10 gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Flame size={18} className="text-[#C87932] animate-bounce" />
@@ -115,14 +116,15 @@ export const SnackCounter: React.FC = () => {
               <ChevronRight size={20} />
             </button>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Horizontal Scrolling Board (Swipeable on mobile) */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto pb-8 pt-2 no-scrollbar scroll-smooth snap-x snap-mandatory"
-          style={{ WebkitOverflowScrolling: 'touch' }}
-        >
+        <ScrollReveal animation="fade-up" delay={150} duration={750}>
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto pb-8 pt-2 no-scrollbar scroll-smooth snap-x snap-mandatory"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
           {counterItems.map((item, index) => (
             <div
               key={item.id}
@@ -174,6 +176,7 @@ export const SnackCounter: React.FC = () => {
             </div>
           ))}
         </div>
+        </ScrollReveal>
 
         {/* Micro-hint on Mobile */}
         <p className="text-center text-xs text-[#F4E7D0]/60 font-sans mt-2 md:hidden">

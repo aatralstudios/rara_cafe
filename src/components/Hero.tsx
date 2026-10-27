@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon, SteamWisp } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const Hero: React.FC = () => {
   const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=RaRa+Cafe+Karappakkam+Chennai+600097';
@@ -27,7 +28,7 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* LEFT: Editorial Typography & CTAs (7 cols) */}
-          <div className="lg:col-span-7 text-left space-y-6 z-10">
+          <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-7 text-left space-y-6 z-10">
             {/* Vintage Micro-Badges (Requirement #6) */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5A2918]/80 border border-[#C87932]/50 text-[#F4E7D0] text-xs font-serif tracking-widest uppercase">
@@ -86,10 +87,10 @@ export const Hero: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#6D7A45]"></span>
               <span>Dine-In • Karappakkam, Rajiv Gandhi Salai (OMR) • Open Daily</span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Visual Hero Composition (5 cols) */}
-          <div className="lg:col-span-5 relative flex justify-center items-center">
+          <ScrollReveal animation="fade-left" duration={900} delay={150} className="lg:col-span-5 relative flex justify-center items-center">
             {/* Warm Ambient Glow behind Artwork */}
             <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#C87932]/20 blur-3xl pointer-events-none"></div>
 
@@ -138,7 +139,7 @@ export const Hero: React.FC = () => {
               <span className="absolute bottom-2 left-2 w-2 h-2 rounded-full bg-[#C87932]/60 border border-[#21100A]"></span>
               <span className="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-[#C87932]/60 border border-[#21100A]"></span>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

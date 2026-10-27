@@ -1,5 +1,6 @@
 import React from 'react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const WhyRara: React.FC = () => {
   const pillars = [
@@ -71,7 +72,7 @@ export const WhyRara: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto mb-16">
+        <ScrollReveal animation="fade-up" duration={700} className="text-center max-w-xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <CoffeeBeanIcon size={16} color="#C87932" />
             <span className="font-serif text-xs uppercase tracking-widest text-[#5A2918] font-bold">
@@ -91,45 +92,53 @@ export const WhyRara: React.FC = () => {
           <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
             Four simple reasons people keep coming back to our Karappakkam corner.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* 4 Visual Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pillars.map((p) => (
-            <div
+          {pillars.map((p, index) => (
+            <ScrollReveal
               key={p.num}
-              className="relative bg-[#FFF8EA] rounded-2xl p-6 sm:p-7 border-2 border-[#5A2918]/20 shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+              animation="fade-up"
+              delay={index * 120}
+              duration={650}
             >
-              {/* Pillar Number Badge */}
-              <div className="flex items-center justify-between mb-5">
-                <span className="font-serif text-4xl font-black text-[#C87932] group-hover:text-[#3A170D] transition-colors">
-                  {p.num}
-                </span>
-                <div className="p-2.5 rounded-xl bg-[#F4E7D0] border border-[#C87932]/30 group-hover:rotate-6 transition-transform">
-                  {p.icon}
+              <div
+                className="relative bg-[#FFF8EA] rounded-2xl p-6 sm:p-7 border-2 border-[#5A2918]/20 shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 h-full flex flex-col justify-between"
+              >
+                <div>
+                  {/* Pillar Number Badge */}
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="font-serif text-4xl font-black text-[#C87932] group-hover:text-[#3A170D] transition-colors">
+                      {p.num}
+                    </span>
+                    <div className="p-2.5 rounded-xl bg-[#F4E7D0] border border-[#C87932]/30 group-hover:rotate-6 transition-transform">
+                      {p.icon}
+                    </div>
+                  </div>
+
+                  {/* Title & Tagline */}
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-[#21100A] tracking-tight group-hover:text-[#C87932] transition-colors">
+                    {p.title}
+                  </h3>
+                  
+                  <p className="text-xs font-mono font-bold text-[#6D7A45] uppercase tracking-wider mt-1 mb-3">
+                    {p.tagline}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-[#5A2918]/80 font-sans leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
+
+                {/* Bottom decorative corner */}
+                <div className="mt-6 pt-3 border-t border-[#3A170D]/10 flex items-center justify-between text-[11px] font-mono text-[#5A2918]/60">
+                  <span>RaRa Standard</span>
+                  <span>✦</span>
                 </div>
               </div>
-
-              {/* Title & Tagline */}
-              <h3 className="font-serif text-lg sm:text-xl font-bold text-[#21100A] tracking-tight group-hover:text-[#C87932] transition-colors">
-                {p.title}
-              </h3>
-              
-              <p className="text-xs font-mono font-bold text-[#6D7A45] uppercase tracking-wider mt-1 mb-3">
-                {p.tagline}
-              </p>
-
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-[#5A2918]/80 font-sans leading-relaxed">
-                {p.desc}
-              </p>
-
-              {/* Bottom decorative corner */}
-              <div className="mt-6 pt-3 border-t border-[#3A170D]/10 flex items-center justify-between text-[11px] font-mono text-[#5A2918]/60">
-                <span>RaRa Standard</span>
-                <span>✦</span>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

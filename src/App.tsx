@@ -1,6 +1,8 @@
 import React from 'react';
 import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Hero } from './components/Hero';
 import { BrandIntro } from './components/BrandIntro';
 import { SignatureSnacks } from './components/SignatureSnacks';
@@ -16,6 +18,12 @@ import { Footer } from './components/Footer';
 export const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#F4E7D0] text-[#2A170F] font-sans antialiased overflow-x-hidden selection:bg-[#C87932] selection:text-[#FFF8EA]">
+      {/* Scroll Progress Indicator */}
+      <ScrollProgressBar />
+
+      {/* Floating Scroll to Top Button */}
+      <ScrollToTop />
+
       {/* 0. Branded Swift Loading Animation */}
       <LoadingScreen />
 

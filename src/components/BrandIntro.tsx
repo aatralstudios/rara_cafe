@@ -1,5 +1,6 @@
 import React from 'react';
 import { CoffeeBeanIcon, CurvedUnderline } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const BrandIntro: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const BrandIntro: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* LEFT: Large Editorial Typography (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
+          <ScrollReveal animation="fade-right" duration={800} className="lg:col-span-7 space-y-6">
             
             {/* Number Tag (Requirement #8) */}
             <div className="flex items-center gap-4">
@@ -69,10 +70,10 @@ export const BrandIntro: React.FC = () => {
                 “Pull up a chair. There’s always time for one more cup.”
               </span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Vintage Illustrated Composition (5 cols) */}
-          <div className="lg:col-span-5 relative">
+          <ScrollReveal animation="fade-left" duration={850} delay={150} className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md">
               
               {/* Backing Scrapbook Layer with Angle */}
@@ -114,7 +115,7 @@ export const BrandIntro: React.FC = () => {
               </div>
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

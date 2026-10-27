@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Camera } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 interface GalleryItem {
   id: string;
@@ -75,7 +76,7 @@ export const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto mb-12">
+        <ScrollReveal animation="fade-up" duration={700} className="text-center max-w-xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 mb-3">
             <Camera size={16} className="text-[#C87932]" />
             <span className="font-serif text-xs uppercase tracking-widest text-[#5A2918] font-bold">
@@ -94,10 +95,10 @@ export const Gallery: React.FC = () => {
           <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
             Glimpses of daily warmth, freshly fried savouries, and slow coffee sips.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <ScrollReveal animation="fade-up" delay={100} duration={650} className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -111,43 +112,50 @@ export const Gallery: React.FC = () => {
               {filter}
             </button>
           ))}
-        </div>
+        </ScrollReveal>
 
         {/* Masonry Style Grid with Hover Handwritten Captions (Requirement #19) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <div
+          {filteredItems.map((item, index) => (
+            <ScrollReveal
               key={item.id}
-              className={`group relative overflow-hidden rounded-2xl border-2 border-[#5A2918]/25 bg-[#3A170D] shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-[#C87932] ${item.aspectClass}`}
+              animation="zoom-in"
+              delay={(index % 3) * 120}
+              duration={650}
+              className={`h-full ${item.aspectClass}`}
             >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-105"
-                loading="lazy"
-              />
+              <div
+                className="group relative overflow-hidden rounded-2xl border-2 border-[#5A2918]/25 bg-[#3A170D] shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-[#C87932] h-full w-full"
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-105"
+                  loading="lazy"
+                />
 
-              {/* Gradient Scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#21100A]/90 via-[#21100A]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                {/* Tag */}
-                <span className="inline-block self-start text-[10px] font-mono uppercase tracking-wider text-[#C87932] bg-[#21100A] px-2.5 py-0.5 rounded-full mb-1 border border-[#C87932]/40">
-                  {item.tag}
-                </span>
+                {/* Gradient Scrim */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#21100A]/90 via-[#21100A]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                  {/* Tag */}
+                  <span className="inline-block self-start text-[10px] font-mono uppercase tracking-wider text-[#C87932] bg-[#21100A] px-2.5 py-0.5 rounded-full mb-1 border border-[#C87932]/40">
+                    {item.tag}
+                  </span>
 
-                {/* Handwritten Caption (Requirement #19) */}
-                <p className="font-hand text-lg text-[#FFF8EA] leading-snug">
-                  {item.caption}
-                </p>
-                <span className="font-mono text-[11px] text-[#F4E7D0]/60 mt-1">
-                  RaRa Cafe • Karappakkam
-                </span>
+                  {/* Handwritten Caption (Requirement #19) */}
+                  <p className="font-hand text-lg text-[#FFF8EA] leading-snug">
+                    {item.caption}
+                  </p>
+                  <span className="font-mono text-[11px] text-[#F4E7D0]/60 mt-1">
+                    RaRa Cafe • Karappakkam
+                  </span>
+                </div>
+
+                {/* Corner Watermark */}
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-80 transition-opacity duration-300">
+                  <CoffeeBeanIcon size={18} color="#C87932" />
+                </div>
               </div>
-
-              {/* Corner Watermark */}
-              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-80 transition-opacity duration-300">
-                <CoffeeBeanIcon size={18} color="#C87932" />
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

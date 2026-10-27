@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Compass, Navigation, UtensilsCrossed } from 'lucide-react';
 import { CurvedUnderline } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const LocationSection: React.FC = () => {
   const address = '1/413, Natesan Avenue, Rajiv Gandhi Salai, Karappakkam, Kanchipuram, Chennai, Tamil Nadu 600097';
@@ -17,7 +18,7 @@ export const LocationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-14">
+        <ScrollReveal animation="fade-up" duration={700} className="text-center max-w-xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 mb-3">
             <Compass size={18} className="text-[#C87932] animate-spin" style={{ animationDuration: '16s' }} />
             <span className="font-serif text-xs uppercase tracking-widest text-[#5A2918] font-bold">
@@ -36,12 +37,12 @@ export const LocationSection: React.FC = () => {
           <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
             Conveniently located on Rajiv Gandhi Salai (OMR), Karappakkam.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
           {/* LEFT: Business Info Card (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between bg-[#FFF8EA] rounded-2xl p-7 sm:p-8 shadow-xl border-2 border-[#5A2918]/25 space-y-6">
+          <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-5 flex flex-col justify-between bg-[#FFF8EA] rounded-2xl p-7 sm:p-8 shadow-xl border-2 border-[#5A2918]/25 space-y-6">
             <div>
               {/* Cafe Identity Badge */}
               <div className="flex items-center gap-3 pb-5 border-b border-[#3A170D]/15">
@@ -152,10 +153,10 @@ export const LocationSection: React.FC = () => {
               </a>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* RIGHT: Stylized Interactive Map Card (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col">
+          <ScrollReveal animation="fade-left" duration={850} delay={150} className="lg:col-span-7 flex flex-col">
             <div className="relative flex-1 min-h-[380px] rounded-2xl overflow-hidden border-2 border-[#5A2918]/30 shadow-xl bg-[#3A170D] group">
               
               {/* Embedded Interactive Google Map */}
@@ -195,7 +196,7 @@ export const LocationSection: React.FC = () => {
               </div>
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
 

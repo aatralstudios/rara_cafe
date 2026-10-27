@@ -1,5 +1,6 @@
 import React from 'react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
+import { ScrollReveal } from './ScrollReveal';
 
 export const VisualStory: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ export const VisualStory: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Editorial Top Headline */}
-        <div className="max-w-3xl mb-16">
+        <ScrollReveal animation="fade-up" duration={700} className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-8 h-[2px] bg-[#C87932]"></span>
             <span className="font-mono text-xs uppercase tracking-widest text-[#C87932] font-bold">
@@ -27,13 +28,13 @@ export const VisualStory: React.FC = () => {
           <div className="mt-4 w-60">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Asymmetrical Magazine Collage (Requirement #13) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Column 1: Main Feature Coffee & Spices (5 cols) */}
-          <div className="lg:col-span-5 relative">
+          <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[#C87932]/40 bg-[#3A170D] group">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
@@ -58,10 +59,10 @@ export const VisualStory: React.FC = () => {
               <span>KARAP</span>
               <span>PAKKAM</span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Column 2: Story Text + Overlapping Snack Basket (7 cols) */}
-          <div className="lg:col-span-7 space-y-8 lg:pl-6">
+          <ScrollReveal animation="fade-left" duration={850} delay={150} className="lg:col-span-7 space-y-8 lg:pl-6">
             
             {/* Editorial Paragraph */}
             <div className="space-y-4 text-base sm:text-lg text-[#F4E7D0]/90 font-sans leading-relaxed">
@@ -125,7 +126,7 @@ export const VisualStory: React.FC = () => {
               </p>
             </div>
 
-          </div>
+          </ScrollReveal>
 
         </div>
 
