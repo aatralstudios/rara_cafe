@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Compass, Navigation, UtensilsCrossed } from 'lucide-react';
 import { CurvedUnderline } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 export const LocationSection: React.FC = () => {
   const address = '1/413, Natesan Avenue, Rajiv Gandhi Salai, Karappakkam, Kanchipuram, Chennai, Tamil Nadu 600097';
@@ -48,7 +49,7 @@ export const LocationSection: React.FC = () => {
               <div className="flex items-center gap-3 pb-5 border-b border-[#3A170D]/15">
                 <div className="w-14 h-14 rounded-xl bg-[#3A170D] p-1 flex items-center justify-center overflow-hidden border border-[#C87932]/40">
                   <img
-                    src="/assets/brand/rara-logo.png"
+                    src={asset('/assets/brand/rara-logo.png')}
                     alt="RaRa Cafe emblem"
                     className="w-full h-auto object-contain"
                   />

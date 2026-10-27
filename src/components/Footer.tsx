@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MapPin, Heart } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
+import { asset } from '../utils/asset';
 
 export const Footer: React.FC = () => {
   const phone = '088087 01617';
@@ -29,7 +30,7 @@ export const Footer: React.FC = () => {
             {/* Logo */}
             <div className="w-56 overflow-hidden rounded-xl border border-[#C87932]/40 bg-[#3A170D] p-2 shadow-lg">
               <img
-                src="/assets/brand/rara-logo.png"
+                src={asset('/assets/brand/rara-logo.png')}
                 alt="RaRa Cafe Logo"
                 className="w-full h-auto object-contain"
               />

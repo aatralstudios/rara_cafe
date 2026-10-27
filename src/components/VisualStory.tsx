@@ -1,6 +1,7 @@
 import React from 'react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 export const VisualStory: React.FC = () => {
   return (
@@ -38,7 +39,7 @@ export const VisualStory: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[#C87932]/40 bg-[#3A170D] group">
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="/assets/food/hot-chai.jpg"
+                  src={asset('/assets/food/hot-chai.jpg')}
                   alt="Aromatic spiced tea poured with spices on dark wood"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
                   loading="lazy"
@@ -84,7 +85,7 @@ export const VisualStory: React.FC = () => {
               <div className="rounded-xl overflow-hidden border border-[#C87932]/30 bg-[#3A170D] p-3 shadow-lg">
                 <div className="aspect-[16/10] overflow-hidden rounded-lg mb-3">
                   <img
-                    src="/assets/food/crispy-snacks.jpg"
+                    src={asset('/assets/food/crispy-snacks.jpg')}
                     alt="Crispy masala snacks on rustic paper"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -102,7 +103,7 @@ export const VisualStory: React.FC = () => {
               <div className="rounded-xl overflow-hidden border border-[#C87932]/30 bg-[#3A170D] p-3 shadow-lg">
                 <div className="aspect-[16/10] overflow-hidden rounded-lg mb-3">
                   <img
-                    src="/assets/food/filter-coffee.jpg"
+                    src={asset('/assets/food/filter-coffee.jpg')}
                     alt="South Indian filter coffee in brass dabara"
                     className="w-full h-full object-cover"
                     loading="lazy"

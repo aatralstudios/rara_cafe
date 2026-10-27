@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Tag } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 interface MenuItem {
   id: string;
@@ -26,7 +27,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'HOT & CRISPY',
       description: 'Hand-cut golden potato fries tossed in special aromatic South Indian spice mix and curry leaves.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/crispy-snacks.jpg',
+      image: asset('/assets/food/crispy-snacks.jpg'),
       rotationClass: 'hover:-rotate-1 sm:-rotate-1',
     },
     {
@@ -35,7 +36,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'COFFEE & CHAI',
       description: 'Slow-dripped dark chicory blend frothed with full-cream milk in a traditional brass dabara.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/filter-coffee.jpg',
+      image: asset('/assets/food/filter-coffee.jpg'),
       rotationClass: 'hover:rotate-1 sm:rotate-1',
     },
     {
@@ -44,7 +45,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'COFFEE & CHAI',
       description: 'Crushed ginger, fragrant cardamom pods, and strong Assam tea brewed to steaming perfection.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/hot-chai.jpg',
+      image: asset('/assets/food/hot-chai.jpg'),
       rotationClass: 'hover:-rotate-1 sm:-rotate-0.5',
     },
     {
@@ -53,7 +54,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'HOT & CRISPY',
       description: 'Flaky pastry shells stuffed with spiced potatoes and peas, served with mint-coriander chutney.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/crispy-snacks.jpg',
+      image: asset('/assets/gallery/samosa-platter.jpg'),
       rotationClass: 'hover:rotate-1 sm:rotate-1',
     },
     {
@@ -62,7 +63,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'QUICK BITES',
       description: 'Warm, cloud-soft bakery bun slathered generously with fresh whipped butter and cardamom sugar.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/cafe-ambience.jpg',
+      image: asset('/assets/gallery/bun-maska.jpg'),
       rotationClass: 'hover:-rotate-1 sm:-rotate-1',
     },
     {
@@ -71,7 +72,7 @@ export const SignatureSnacks: React.FC = () => {
       category: 'SWEET TREATS',
       description: 'Old-school sponge cake slice with warm jaggery drizzle, perfect companion to a hot cuppa.',
       pricePlaceholder: '₹ -- (Placeholder)',
-      image: '/assets/food/filter-coffee.jpg',
+      image: asset('/assets/gallery/banana-cake.jpg'),
       rotationClass: 'hover:rotate-1 sm:rotate-0.5',
     },
   ];

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon, SteamWisp } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 export const Hero: React.FC = () => {
   const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=RaRa+Cafe+Karappakkam+Chennai+600097';
@@ -102,7 +103,7 @@ export const Hero: React.FC = () => {
                 {/* Official RaRa Cafe Logo Banner */}
                 <div className="w-full max-w-xs mb-3 transition-transform duration-300 group-hover:scale-[1.02]">
                   <img
-                    src="/assets/brand/rara-logo.png"
+                    src={asset('/assets/brand/rara-logo.png')}
                     alt="RaRa Cafe Official Logo"
                     className="w-full h-auto object-contain drop-shadow-lg"
                   />
@@ -116,7 +117,7 @@ export const Hero: React.FC = () => {
                   </div>
 
                   <img
-                    src="/assets/brand/rara-hero-illustration.png"
+                    src={asset('/assets/brand/rara-hero-illustration.png')}
                     alt="Hand-drawn crispy snack fries and hot steaming coffee cup"
                     className="w-full h-auto object-contain rounded-lg filter contrast-110 drop-shadow-md"
                   />

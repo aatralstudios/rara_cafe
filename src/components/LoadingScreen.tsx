@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SteamWisp } from './CurvedUnderline';
+import { asset } from '../utils/asset';
 
 export const LoadingScreen: React.FC = () => {
   const [visible, setVisible] = useState(true);
@@ -40,7 +41,7 @@ export const LoadingScreen: React.FC = () => {
         {/* RaRa Cafe Logo */}
         <div className="w-56 sm:w-72 overflow-hidden rounded-xl shadow-2xl border border-[#C87932]/30 bg-[#3A170D] p-2 transition-transform duration-500 scale-100">
           <img
-            src="/assets/brand/rara-logo.png"
+            src={asset('/assets/brand/rara-logo.png')}
             alt="RaRa Cafe Logo"
             className="w-full h-auto object-contain"
           />

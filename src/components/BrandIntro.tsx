@@ -1,6 +1,7 @@
 import React from 'react';
 import { CoffeeBeanIcon, CurvedUnderline } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 export const BrandIntro: React.FC = () => {
   return (
@@ -84,7 +85,7 @@ export const BrandIntro: React.FC = () => {
                 
                 <div className="overflow-hidden rounded-xl aspect-[4/3] relative border border-[#3A170D]/20">
                   <img
-                    src="/assets/food/cafe-ambience.jpg"
+                    src={asset('/assets/food/cafe-ambience.jpg')}
                     alt="Warm RaRa Cafe atmosphere and wooden counter"
                     className="w-full h-full object-cover filter contrast-105 hover:scale-105 transition-transform duration-700"
                   />

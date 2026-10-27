@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Camera } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 interface GalleryItem {
   id: string;
@@ -19,7 +20,7 @@ export const Gallery: React.FC = () => {
     // --- COFFEE (4 Items) ---
     {
       id: 'g1',
-      src: '/assets/food/filter-coffee.jpg',
+      src: asset('/assets/food/filter-coffee.jpg'),
       alt: 'Frothy filter coffee in traditional brass davarah',
       category: 'COFFEE',
       caption: '“The morning ritual in brass.”',
@@ -27,7 +28,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g2',
-      src: '/assets/food/hot-chai.jpg',
+      src: asset('/assets/food/hot-chai.jpg'),
       alt: 'Steaming cutting chai poured into glasses with spices',
       category: 'COFFEE',
       caption: '“Simmered ginger & green cardamom warmth.”',
@@ -35,7 +36,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g3',
-      src: '/assets/gallery/iced-kaapi.jpg',
+      src: asset('/assets/gallery/iced-kaapi.jpg'),
       alt: 'Creamy iced South Indian filter coffee frappe in tall glass',
       category: 'COFFEE',
       caption: '“Slow-dripped chicory brew on cold milk foam.”',
@@ -43,7 +44,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g4',
-      src: '/assets/gallery/coffee-art.jpg',
+      src: asset('/assets/gallery/coffee-art.jpg'),
       alt: 'Artisanal latte with rosetta microfoam in ceramic cup',
       category: 'COFFEE',
       caption: '“Velvety microfoam & rich roasted aroma.”',
@@ -53,7 +54,7 @@ export const Gallery: React.FC = () => {
     // --- SNACKS (4 Items) ---
     {
       id: 'g5',
-      src: '/assets/food/crispy-snacks.jpg',
+      src: asset('/assets/food/crispy-snacks.jpg'),
       alt: 'Hot crispy potato fries and savoury snacks in basket',
       category: 'SNACKS',
       caption: '“Hot crunch, fresh curry leaves & masala.”',
@@ -61,7 +62,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g6',
-      src: '/assets/gallery/samosa-platter.jpg',
+      src: asset('/assets/gallery/samosa-platter.jpg'),
       alt: 'Golden flaky samosas with mint coriander and tamarind chutney',
       category: 'SNACKS',
       caption: '“Golden flaky crust with spiced potato stuffing.”',
@@ -69,7 +70,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g7',
-      src: '/assets/gallery/bun-maska.jpg',
+      src: asset('/assets/gallery/bun-maska.jpg'),
       alt: 'Warm bakery bun slathered with whipped butter and tea',
       category: 'SNACKS',
       caption: '“Cloud-soft bun with generous whipped butter.”',
@@ -77,7 +78,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g8',
-      src: '/assets/gallery/banana-cake.jpg',
+      src: asset('/assets/gallery/banana-cake.jpg'),
       alt: 'Caramelised banana cake slice with jaggery drizzle',
       category: 'SNACKS',
       caption: '“Old-school jaggery caramelized banana cake.”',
@@ -87,7 +88,7 @@ export const Gallery: React.FC = () => {
     // --- AMBIENCE (4 Items) ---
     {
       id: 'g9',
-      src: '/assets/food/cafe-ambience.jpg',
+      src: asset('/assets/food/cafe-ambience.jpg'),
       alt: 'Cosy wooden café seating with warm pendant lights and friends',
       category: 'AMBIENCE',
       caption: '“Warm timber, warm lighting, good chats.”',
@@ -95,7 +96,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g10',
-      src: '/assets/gallery/cafe-counter.jpg',
+      src: asset('/assets/gallery/cafe-counter.jpg'),
       alt: 'Artisanal wooden cafe counter and blackboard menu',
       category: 'AMBIENCE',
       caption: '“Freshly prepared at the counter everyday.”',
@@ -103,7 +104,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g11',
-      src: '/assets/gallery/cozy-nook.jpg',
+      src: asset('/assets/gallery/cozy-nook.jpg'),
       alt: 'Sunlit window seating nook with cushions and books',
       category: 'AMBIENCE',
       caption: '“A quiet corner to slow down and unwind.”',
@@ -111,7 +112,7 @@ export const Gallery: React.FC = () => {
     },
     {
       id: 'g12',
-      src: '/assets/brand/rara-brand-full.jpg',
+      src: asset('/assets/brand/rara-brand-full.jpg'),
       alt: 'Original RaRa Cafe woodcut artwork and heritage emblem',
       category: 'AMBIENCE',
       caption: '“The woodcut heritage and spirit of RaRa.”',

@@ -2,6 +2,7 @@ import React from 'react';
 import { Coffee, CupSoda, Flame, Sparkles } from 'lucide-react';
 import { CurvedUnderline, CoffeeBeanIcon, SteamWisp } from './CurvedUnderline';
 import { ScrollReveal } from './ScrollReveal';
+import { asset } from '../utils/asset';
 
 export const CoffeeSection: React.FC = () => {
   const beverageCategories = [
@@ -98,7 +99,7 @@ export const CoffeeSection: React.FC = () => {
               {/* Photo with vintage frame */}
               <div className="relative rounded-xl overflow-hidden aspect-square border border-[#C87932]/40 shadow-inner">
                 <img
-                  src="/assets/food/filter-coffee.jpg"
+                  src={asset('/assets/food/filter-coffee.jpg')}
                   alt="Authentic South Indian filter coffee in brass dabara tumbler"
                   className="w-full h-full object-cover filter contrast-110"
                 />

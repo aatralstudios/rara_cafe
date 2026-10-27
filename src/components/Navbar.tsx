@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin } from 'lucide-react';
 import { CoffeeBeanIcon } from './CurvedUnderline';
+import { asset } from '../utils/asset';
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +45,7 @@ export const Navbar: React.FC = () => {
         >
           <div className="h-10 sm:h-12 w-auto overflow-hidden rounded-md border border-[#C87932]/40 bg-[#3A170D] p-1 transition-transform group-hover:scale-105 duration-200">
             <img
-              src="/assets/brand/rara-logo.png"
+              src={asset('/assets/brand/rara-logo.png')}
               alt="RaRa Cafe Logo"
               className="h-full w-auto object-contain"
             />
