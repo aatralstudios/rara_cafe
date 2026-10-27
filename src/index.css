@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #3A170D;
+  --color-roasted: #5A2918;
+  --color-cream: #F4E7D0;
+  --color-dark: #21100A;
+  --color-caramel: #C87932;
+  --color-leaf: #6D7A45;
+  --color-text-main: #2A170F;
+  --color-warm-white: #FFF8EA;
+
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-hand: 'Kalam', cursive;
+}
+
+:root {
+  --color-espresso: #3A170D;
+  --color-roasted: #5A2918;
+  --color-cream: #F4E7D0;
+  --color-dark: #21100A;
+  --color-caramel: #C87932;
+  --color-leaf: #6D7A45;
+  --color-text-main: #2A170F;
+  --color-warm-white: #FFF8EA;
+}
+
+/* Custom Wood Grain Background Pattern */
+.bg-wood-pattern {
+  background-color: #21100A;
+  background-image: 
+    radial-gradient(ellipse at center, rgba(58, 23, 13, 0.4) 0%, rgba(33, 16, 10, 0.95) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 255, 255, 0.015) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.25) 0px,
+      rgba(0, 0, 0, 0.25) 4px,
+      transparent 4px,
+      transparent 14px
+    );
+}
+
+/* Subtle Paper Texture Overlay */
+.bg-paper-texture {
+  background-color: #F4E7D0;
+  background-image: 
+    radial-gradient(#d3c2a3 0.75px, transparent 0.75px), 
+    radial-gradient(#d3c2a3 0.75px, #F4E7D0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Steam Animation */
+@keyframes steamDrift {
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(-25px) scaleX(1.15) scaleY(1.2) translateX(4px);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateY(-50px) scaleX(1.3) scaleY(1.4) translateX(-4px);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-75px) scaleX(1.5) scaleY(1.6) translateX(6px);
+    opacity: 0;
+  }
+}
+
+.animate-steam-1 {
+  animation: steamDrift 3.5s ease-out infinite;
+}
+
+.animate-steam-2 {
+  animation: steamDrift 4.2s ease-out infinite 1.2s;
+}
+
+.animate-steam-3 {
+  animation: steamDrift 3.8s ease-out infinite 2.1s;
+}
+
+/* Floating Coffee Bean Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGentle 6s ease-in-out infinite 2.5s;
+}
+
+/* Hide scrollbar for clean horizontal snack counter */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Vintage Hand-Drawn Border and Stamp Utilities */
+.vintage-border {
+  border: 2px dashed rgba(200, 121, 50, 0.4);
+}
+
+.vintage-stamp {
+  border: 2px solid #5A2918;
+  box-shadow: 3px 3px 0px #3A170D;
+}
