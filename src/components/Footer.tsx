@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
           {/* Brand Info & Motto (5 cols) */}
           <div className="md:col-span-5 space-y-5">
             {/* Logo */}
-            <div className="w-56 overflow-hidden rounded-xl border border-[#C87932]/40 bg-[#3A170D] p-2 shadow-lg">
+            <div className="w-44 sm:w-56 overflow-hidden rounded-xl border border-[#C87932]/40 bg-[#3A170D] p-2 shadow-lg">
               <img
                 src={asset('/assets/brand/rara-logo.png')}
                 alt="RaRa Cafe Logo"
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
 
             {/* Triad Motto (Requirement #17) */}
             <div className="pt-2">
-              <p className="font-serif text-2xl sm:text-3xl font-bold text-[#FFF8EA] tracking-wide leading-snug">
+              <p className="font-serif text-xl sm:text-3xl font-bold text-[#FFF8EA] tracking-wide leading-snug">
                 GOOD FOOD. <br />
                 GOOD COFFEE. <br />
                 <span className="text-[#C87932]">GOOD COMPANY.</span>

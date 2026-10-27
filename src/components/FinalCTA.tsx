@@ -37,27 +37,27 @@ export const FinalCTA: React.FC = () => {
         </div>
 
         {/* Large Text (Requirement #30) */}
-        <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-[#FFF8EA] tracking-tight leading-tight">
+        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#FFF8EA] tracking-tight leading-tight">
           READY FOR A <br />
           <span className="text-[#C87932] italic">LITTLE BREAK?</span>
         </h2>
 
-        <div className="mt-3 mx-auto w-56">
+        <div className="mt-3 mx-auto w-44 sm:w-56">
           <CurvedUnderline color="#C87932" width="100%" />
         </div>
 
         {/* Supporting Text */}
-        <p className="mt-6 text-[#F4E7D0]/90 text-lg sm:text-xl font-sans max-w-xl mx-auto leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-[#F4E7D0]/90 text-base sm:text-lg md:text-xl font-sans max-w-xl mx-auto leading-relaxed">
           Coffee, something crispy and a place to slow down.
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
           <a
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#C87932] text-[#FFF8EA] font-bold text-sm tracking-wider hover:bg-[#b06725] transition-all duration-300 shadow-2xl hover:scale-105"
+            className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#C87932] text-[#FFF8EA] font-bold text-sm tracking-wider hover:bg-[#b06725] transition-all duration-300 shadow-2xl hover:scale-105 min-h-[46px] text-center"
           >
             <MapPin size={16} />
             <span>GET DIRECTIONS →</span>
@@ -66,7 +66,7 @@ export const FinalCTA: React.FC = () => {
 
           <a
             href={`tel:${phone.replace(/\s/g, '')}`}
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[#3A170D] hover:bg-[#5A2918] border border-[#C87932]/50 text-[#F4E7D0] font-bold text-sm tracking-wider transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#3A170D] hover:bg-[#5A2918] border border-[#C87932]/50 text-[#F4E7D0] font-bold text-sm tracking-wider transition-all duration-200 hover:scale-105 min-h-[46px] text-center"
           >
             <Phone size={16} className="text-[#C87932]" />
             <span>CALL RARA CAFE</span>

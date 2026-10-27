@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MapPin } from 'lucide-react';
+import { Menu, X, MapPin, Phone } from 'lucide-react';
 import { CoffeeBeanIcon } from './CurvedUnderline';
 import { asset } from '../utils/asset';
 
@@ -15,6 +15,18 @@ export const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'HOME', href: '#hero' },
@@ -112,36 +124,60 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu & Backdrop */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#21100A] text-[#F4E7D0] border-b border-[#C87932]/30 px-6 py-6 shadow-2xl animate-in slide-in-from-top duration-200">
-          <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-serif tracking-wider text-[#F4E7D0] hover:text-[#C87932] transition-colors py-1 border-b border-[#3A170D]"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-[#C87932] text-[#FFF8EA] font-bold text-sm tracking-wider hover:bg-[#A86124] transition-colors shadow-md"
-            >
-              <MapPin size={16} />
-              <span>GET DIRECTIONS</span>
-            </a>
-            <div className="pt-2 text-center text-xs text-[#F4E7D0]/60">
-              <p>Karappakkam, Rajiv Gandhi Salai, Chennai</p>
-              <p className="mt-1 font-mono text-[#C87932]">088087 01617</p>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 top-[60px] bg-black/60 backdrop-blur-xs z-30 md:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Drawer Content */}
+          <div className="relative z-40 md:hidden bg-[#21100A] text-[#F4E7D0] border-b border-[#C87932]/30 px-6 py-6 shadow-2xl animate-in slide-in-from-top duration-200">
+            <div className="flex flex-col space-y-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-base font-serif tracking-wider text-[#F4E7D0] hover:text-[#C87932] transition-colors py-2.5 border-b border-[#3A170D] flex items-center justify-between"
+                >
+                  <span>{link.label}</span>
+                  <span className="text-[#C87932] text-xs">→</span>
+                </a>
+              ))}
+
+              <div className="pt-2 grid grid-cols-2 gap-2">
+                <a
+                  href={`tel:08808701617`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center gap-1.5 py-3 rounded-lg bg-[#3A170D] text-[#FFF8EA] font-mono font-bold text-xs border border-[#C87932]/40 shadow-md active:scale-95 transition-transform"
+                >
+                  <Phone size={14} className="text-[#C87932]" />
+                  <span>CALL</span>
+                </a>
+
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-flex items-center justify-center gap-1.5 py-3 rounded-lg bg-[#C87932] text-[#FFF8EA] font-mono font-bold text-xs tracking-wider hover:bg-[#A86124] transition-colors shadow-md active:scale-95"
+                >
+                  <MapPin size={14} />
+                  <span>DIRECTIONS</span>
+                </a>
+              </div>
+
+              <div className="pt-2 text-center text-xs text-[#F4E7D0]/60">
+                <p>Karappakkam, Rajiv Gandhi Salai, Chennai</p>
+                <p className="mt-1 font-mono text-[#C87932] font-semibold">088087 01617 • Open Daily</p>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

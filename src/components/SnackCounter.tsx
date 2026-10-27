@@ -88,19 +88,19 @@ export const SnackCounter: React.FC = () => {
                 THE PHYSICAL CAFE COUNTER
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-[#FFF8EA]">
+            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#FFF8EA]">
               WHAT’S HOT?
             </h2>
-            <div className="w-32 mt-2">
+            <div className="w-28 sm:w-32 mt-2">
               <CurvedUnderline color="#C87932" width="100%" />
             </div>
-            <p className="text-[#F4E7D0]/70 text-sm font-sans mt-2">
+            <p className="text-[#F4E7D0]/70 text-xs sm:text-sm font-sans mt-2">
               Step up to the counter. Everything made fresh to order.
             </p>
           </div>
 
-          {/* Desktop Scroll Arrows */}
-          <div className="flex items-center gap-3">
+          {/* Scroll Arrows */}
+          <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={() => scroll('left')}
               className="p-3 rounded-full bg-[#3A170D] border border-[#C87932]/50 text-[#F4E7D0] hover:bg-[#C87932] hover:text-white transition-all shadow-md cursor-pointer"
@@ -122,13 +122,13 @@ export const SnackCounter: React.FC = () => {
         <ScrollReveal animation="fade-up" delay={150} duration={750}>
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto pb-8 pt-2 no-scrollbar scroll-smooth snap-x snap-mandatory"
+            className="flex gap-4 sm:gap-6 overflow-x-auto pb-8 pt-2 no-scrollbar scroll-smooth snap-x snap-mandatory px-1"
             style={{ WebkitOverflowScrolling: 'touch' }}
           >
           {counterItems.map((item, index) => (
             <div
               key={item.id}
-              className="shrink-0 w-72 sm:w-80 snap-start bg-[#FFF8EA] rounded-xl p-5 shadow-2xl border-4 border-[#5A2918] flex flex-col justify-between relative group hover:-translate-y-1.5 transition-transform duration-300"
+              className="shrink-0 w-[82vw] max-w-[310px] sm:w-80 snap-start bg-[#FFF8EA] rounded-xl p-4 sm:p-5 shadow-2xl border-4 border-[#5A2918] flex flex-col justify-between relative group hover:-translate-y-1.5 transition-transform duration-300"
             >
               {/* Top wooden clip / badge */}
               <div className="flex items-center justify-between border-b-2 border-[#5A2918]/20 pb-3 mb-3">

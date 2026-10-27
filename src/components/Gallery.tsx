@@ -140,21 +140,21 @@ export const Gallery: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#21100A] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#21100A] tracking-tight">
             RA RA MOMENTS
           </h2>
           
-          <div className="mt-2 mx-auto w-40">
+          <div className="mt-2 mx-auto w-36 sm:w-40">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
 
-          <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
+          <p className="mt-4 text-[#5A2918]/80 text-sm sm:text-base font-sans">
             Glimpses of daily warmth, freshly fried savouries, and slow coffee sips.
           </p>
         </ScrollReveal>
 
         {/* Filter Pills */}
-        <ScrollReveal animation="fade-up" delay={100} duration={650} className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <ScrollReveal animation="fade-up" delay={100} duration={650} className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
           {filters.map((filter) => {
             const count =
               filter === 'ALL'
@@ -165,7 +165,7 @@ export const Gallery: React.FC = () => {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-5 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wider transition-all duration-200 cursor-pointer flex items-center gap-1.5 min-h-[38px] ${
                   activeFilter === filter
                     ? 'bg-[#3A170D] text-[#FFF8EA] shadow-md scale-105'
                     : 'bg-[#FFF8EA] text-[#3A170D] hover:bg-[#ebdcc0] border border-[#C87932]/30'
@@ -208,25 +208,25 @@ export const Gallery: React.FC = () => {
                   loading="lazy"
                 />
 
-                {/* Gradient Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#21100A]/95 via-[#21100A]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                {/* Gradient Scrim - visible on mobile, reveals on hover on desktop */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#21100A]/95 via-[#21100A]/50 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3.5 sm:p-5">
                   {/* Tag */}
-                  <span className="inline-block self-start text-[10px] font-mono uppercase tracking-wider text-[#C87932] bg-[#21100A] px-2.5 py-0.5 rounded-full mb-1 border border-[#C87932]/40 font-bold">
+                  <span className="inline-block self-start text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-[#C87932] bg-[#21100A] px-2 sm:px-2.5 py-0.5 rounded-full mb-1 border border-[#C87932]/40 font-bold">
                     {item.tag}
                   </span>
 
                   {/* Handwritten Caption (Requirement #19) */}
-                  <p className="font-hand text-lg text-[#FFF8EA] leading-snug">
+                  <p className="font-hand text-base sm:text-lg text-[#FFF8EA] leading-snug">
                     {item.caption}
                   </p>
-                  <span className="font-mono text-[11px] text-[#F4E7D0]/70 mt-1">
+                  <span className="font-mono text-[10px] sm:text-[11px] text-[#F4E7D0]/70 mt-0.5 sm:mt-1">
                     RaRa Cafe • Karappakkam
                   </span>
                 </div>
 
                 {/* Corner Watermark */}
-                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-90 transition-opacity duration-300">
-                  <CoffeeBeanIcon size={18} color="#C87932" />
+                <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 opacity-80 sm:opacity-0 sm:group-hover:opacity-90 transition-opacity duration-300">
+                  <CoffeeBeanIcon size={16} color="#C87932" />
                 </div>
               </div>
             </ScrollReveal>

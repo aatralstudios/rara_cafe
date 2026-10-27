@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
 
             {/* Oversized Headline */}
             <div className="relative">
-              <h1 className="font-serif text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-[#FFF8EA] leading-[1.08]">
+              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-[#FFF8EA] leading-[1.12] sm:leading-[1.08]">
                 YOUR LITTLE BREAK <br />
                 <span className="text-[#F4E7D0]">FROM THE </span>
                 <span className="relative inline-block text-[#C87932] italic font-serif">
@@ -56,16 +56,16 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Supporting Copy */}
-            <p className="text-[#F4E7D0]/90 text-base sm:text-lg max-w-xl font-sans leading-relaxed pt-2">
+            <p className="text-[#F4E7D0]/90 text-sm sm:text-base md:text-lg max-w-xl font-sans leading-relaxed pt-2">
               Fresh snacks, comforting coffee and good conversations — served the <strong className="text-[#FFF8EA] font-semibold">RaRa</strong> way in the heart of Karappakkam, Chennai.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
               {/* Primary CTA */}
               <a
                 href="#menu"
-                className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-[#C87932] text-[#FFF8EA] font-bold text-sm tracking-wider hover:bg-[#b06725] transition-all duration-300 shadow-xl shadow-black/40 hover:shadow-orange-950/50 hover:translate-x-0.5"
+                className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-[#C87932] text-[#FFF8EA] font-bold text-sm tracking-wider hover:bg-[#b06725] transition-all duration-300 shadow-xl shadow-black/40 hover:shadow-orange-950/50 hover:translate-x-0.5 text-center min-h-[46px]"
               >
                 <span>EXPLORE THE MENU</span>
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -76,7 +76,7 @@ export const Hero: React.FC = () => {
                 href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#3A170D]/90 hover:bg-[#5A2918] border border-[#C87932]/60 text-[#F4E7D0] font-semibold text-sm tracking-wider transition-all duration-200 hover:text-white"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#3A170D]/90 hover:bg-[#5A2918] border border-[#C87932]/60 text-[#F4E7D0] font-semibold text-sm tracking-wider transition-all duration-200 hover:text-white text-center min-h-[46px]"
               >
                 <MapPin size={16} className="text-[#C87932]" />
                 <span>GET DIRECTIONS</span>
@@ -84,8 +84,8 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Quick Micro-Detail / Location Tag */}
-            <div className="pt-4 flex items-center gap-3 text-xs text-[#F4E7D0]/70 font-sans border-t border-white/10 max-w-lg">
-              <span className="w-2 h-2 rounded-full bg-[#6D7A45]"></span>
+            <div className="pt-4 flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-[#F4E7D0]/70 font-sans border-t border-white/10 max-w-lg">
+              <span className="w-2 h-2 rounded-full bg-[#6D7A45] shrink-0"></span>
               <span>Dine-In • Karappakkam, Rajiv Gandhi Salai (OMR) • Open Daily</span>
             </div>
           </ScrollReveal>
@@ -93,12 +93,12 @@ export const Hero: React.FC = () => {
           {/* RIGHT: Visual Hero Composition (5 cols) */}
           <ScrollReveal animation="fade-left" duration={900} delay={150} className="lg:col-span-5 relative flex justify-center items-center">
             {/* Warm Ambient Glow behind Artwork */}
-            <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-[#C87932]/20 blur-3xl pointer-events-none"></div>
+            <div className="absolute w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-[#C87932]/20 blur-3xl pointer-events-none"></div>
 
             {/* Main Showcase Card with Authentic Wood & Artwork */}
-            <div className="relative w-full max-w-md rounded-2xl overflow-hidden border-2 border-[#C87932]/50 shadow-2xl bg-[#21100A] p-4 sm:p-5 group">
+            <div className="relative w-full max-w-md rounded-2xl overflow-hidden border-2 border-[#C87932]/50 shadow-2xl bg-[#21100A] p-3 sm:p-5 group">
               {/* Vintage Inner Frame */}
-              <div className="relative rounded-xl overflow-hidden border border-[#C87932]/30 bg-gradient-to-b from-[#3A170D] to-[#21100A] p-4 flex flex-col items-center">
+              <div className="relative rounded-xl overflow-hidden border border-[#C87932]/30 bg-gradient-to-b from-[#3A170D] to-[#21100A] p-3 sm:p-4 flex flex-col items-center">
                 
                 {/* Official RaRa Cafe Logo Banner */}
                 <div className="w-full max-w-xs mb-3 transition-transform duration-300 group-hover:scale-[1.02]">

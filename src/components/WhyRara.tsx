@@ -81,21 +81,21 @@ export const WhyRara: React.FC = () => {
             <CoffeeBeanIcon size={16} color="#C87932" />
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#21100A] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#21100A] tracking-tight">
             WHY RARA?
           </h2>
           
-          <div className="mt-2 mx-auto w-36">
+          <div className="mt-2 mx-auto w-32 sm:w-36">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
 
-          <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
+          <p className="mt-4 text-[#5A2918]/80 text-sm sm:text-base font-sans">
             Four simple reasons people keep coming back to our Karappakkam corner.
           </p>
         </ScrollReveal>
 
         {/* 4 Visual Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {pillars.map((p, index) => (
             <ScrollReveal
               key={p.num}
@@ -104,7 +104,7 @@ export const WhyRara: React.FC = () => {
               duration={650}
             >
               <div
-                className="relative bg-[#FFF8EA] rounded-2xl p-6 sm:p-7 border-2 border-[#5A2918]/20 shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 h-full flex flex-col justify-between"
+                className="relative bg-[#FFF8EA] rounded-2xl p-5 sm:p-7 border-2 border-[#5A2918]/20 shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 h-full flex flex-col justify-between"
               >
                 <div>
                   {/* Pillar Number Badge */}

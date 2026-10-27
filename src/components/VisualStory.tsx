@@ -21,12 +21,12 @@ export const VisualStory: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-[#FFF8EA] leading-[1.08]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#FFF8EA] leading-[1.12] sm:leading-[1.08]">
             COME FOR THE SNACK. <br />
             <span className="italic text-[#C87932]">STAY FOR THE MOMENT.</span>
           </h2>
 
-          <div className="mt-4 w-60">
+          <div className="mt-3 sm:mt-4 w-48 sm:w-60">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
         </ScrollReveal>
@@ -45,8 +45,8 @@ export const VisualStory: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-5 bg-gradient-to-t from-[#21100A] to-[#3A170D]/90 border-t border-[#C87932]/30">
-                <p className="font-hand text-xl text-[#F4E7D0]">
+              <div className="p-4 sm:p-5 bg-gradient-to-t from-[#21100A] to-[#3A170D]/90 border-t border-[#C87932]/30">
+                <p className="font-hand text-lg sm:text-xl text-[#F4E7D0]">
                   “A steaming glass in hand, the world slows down.”
                 </p>
                 <span className="text-[11px] font-mono text-[#C87932] uppercase tracking-wider block mt-1">
@@ -56,7 +56,7 @@ export const VisualStory: React.FC = () => {
             </div>
 
             {/* Overlapping Stamp */}
-            <div className="absolute -top-4 -right-4 bg-[#C87932] text-[#21100A] p-3 rounded-full font-serif font-black text-xs uppercase shadow-xl rotate-12 flex flex-col items-center justify-center w-18 h-18 text-center border-2 border-[#21100A]">
+            <div className="absolute -top-3 right-1 sm:-top-4 sm:-right-4 bg-[#C87932] text-[#21100A] p-2.5 sm:p-3 rounded-full font-serif font-black text-[11px] sm:text-xs uppercase shadow-xl rotate-12 flex flex-col items-center justify-center w-16 h-16 sm:w-18 sm:h-18 text-center border-2 border-[#21100A]">
               <span>KARAP</span>
               <span>PAKKAM</span>
             </div>

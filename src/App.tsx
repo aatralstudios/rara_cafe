@@ -3,6 +3,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { ScrollToTop } from './components/ScrollToTop';
+import { MobileActionBar } from './components/MobileActionBar';
 import { Hero } from './components/Hero';
 import { BrandIntro } from './components/BrandIntro';
 import { SignatureSnacks } from './components/SignatureSnacks';
@@ -64,7 +65,12 @@ export const App: React.FC = () => {
       </main>
 
       {/* 11. Footer */}
-      <Footer />
+      <div className="pb-16 md:pb-0">
+        <Footer />
+      </div>
+
+      {/* 12. Mobile Bottom Quick Actions (Call, Directions, Menu) */}
+      <MobileActionBar />
     </div>
   );
 };

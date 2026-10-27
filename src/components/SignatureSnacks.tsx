@@ -28,7 +28,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Hand-cut golden potato fries tossed in special aromatic South Indian spice mix and curry leaves.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/food/crispy-snacks.jpg'),
-      rotationClass: 'hover:-rotate-1 sm:-rotate-1',
+      rotationClass: 'sm:hover:-rotate-1 sm:-rotate-1',
     },
     {
       id: '2',
@@ -37,7 +37,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Slow-dripped dark chicory blend frothed with full-cream milk in a traditional brass dabara.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/food/filter-coffee.jpg'),
-      rotationClass: 'hover:rotate-1 sm:rotate-1',
+      rotationClass: 'sm:hover:rotate-1 sm:rotate-1',
     },
     {
       id: '3',
@@ -46,7 +46,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Crushed ginger, fragrant cardamom pods, and strong Assam tea brewed to steaming perfection.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/food/hot-chai.jpg'),
-      rotationClass: 'hover:-rotate-1 sm:-rotate-0.5',
+      rotationClass: 'sm:hover:-rotate-1 sm:-rotate-0.5',
     },
     {
       id: '4',
@@ -55,7 +55,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Flaky pastry shells stuffed with spiced potatoes and peas, served with mint-coriander chutney.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/gallery/samosa-platter.jpg'),
-      rotationClass: 'hover:rotate-1 sm:rotate-1',
+      rotationClass: 'sm:hover:rotate-1 sm:rotate-1',
     },
     {
       id: '5',
@@ -64,7 +64,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Warm, cloud-soft bakery bun slathered generously with fresh whipped butter and cardamom sugar.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/gallery/bun-maska.jpg'),
-      rotationClass: 'hover:-rotate-1 sm:-rotate-1',
+      rotationClass: 'sm:hover:-rotate-1 sm:-rotate-1',
     },
     {
       id: '6',
@@ -73,7 +73,7 @@ export const SignatureSnacks: React.FC = () => {
       description: 'Old-school sponge cake slice with warm jaggery drizzle, perfect companion to a hot cuppa.',
       pricePlaceholder: '₹ -- (Placeholder)',
       image: asset('/assets/gallery/banana-cake.jpg'),
-      rotationClass: 'hover:rotate-1 sm:rotate-0.5',
+      rotationClass: 'sm:hover:rotate-1 sm:rotate-0.5',
     },
   ];
 
@@ -96,7 +96,7 @@ export const SignatureSnacks: React.FC = () => {
             <CoffeeBeanIcon size={16} color="#C87932" />
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#21100A] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#21100A] tracking-tight">
             THE GOOD STUFF.
           </h2>
           
@@ -193,7 +193,7 @@ export const SignatureSnacks: React.FC = () => {
         <ScrollReveal animation="fade-up" delay={150} duration={650} className="mt-14 text-center">
           <a
             href="#snack-counter"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#3A170D] text-[#FFF8EA] font-serif font-bold text-sm tracking-widest hover:bg-[#5A2918] transition-all duration-300 shadow-xl group border border-[#C87932]/40"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-8 py-4 rounded-full bg-[#3A170D] text-[#FFF8EA] font-serif font-bold text-xs sm:text-sm tracking-widest hover:bg-[#5A2918] transition-all duration-300 shadow-xl group border border-[#C87932]/40 text-center min-h-[46px]"
           >
             <span>VIEW PHYSICAL SNACK COUNTER</span>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 text-[#C87932]" />

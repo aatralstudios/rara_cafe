@@ -71,25 +71,25 @@ export const CoffeeSection: React.FC = () => {
             <CoffeeBeanIcon size={18} color="#C87932" />
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-6xl font-extrabold text-[#FFF8EA] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FFF8EA] tracking-tight">
             BREWED FOR GOOD MOMENTS.
           </h2>
           
-          <div className="mt-3 mx-auto w-52">
+          <div className="mt-3 mx-auto w-40 sm:w-52">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
 
-          <p className="mt-4 text-[#F4E7D0]/80 text-base sm:text-lg font-sans max-w-xl mx-auto">
+          <p className="mt-4 text-[#F4E7D0]/80 text-sm sm:text-base md:text-lg font-sans max-w-xl mx-auto">
             From the brass dabara to the contemporary mug, our brews are crafted to awaken, comfort, and bring people together.
           </p>
         </ScrollReveal>
 
         {/* Centerpiece Showcase: Illustrated Coffee Cup & Cream Menu Slate */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
           {/* LEFT: Illustrated Brass Dabara Feature Image with Rising Steam (5 cols) */}
           <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-[#3A170D] to-[#21100A] p-6 border-2 border-[#C87932]/40 shadow-2xl">
+            <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-[#3A170D] to-[#21100A] p-4 sm:p-6 border-2 border-[#C87932]/40 shadow-2xl">
               
               {/* Steaming Animation above Dabara */}
               <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
@@ -127,7 +127,7 @@ export const CoffeeSection: React.FC = () => {
 
           {/* RIGHT: Cream-Colored Menu Panel (7 cols) */}
           <ScrollReveal animation="fade-left" duration={850} delay={150} className="lg:col-span-7">
-            <div className="bg-[#FFF8EA] text-[#2A170F] rounded-2xl p-6 sm:p-8 shadow-2xl border-4 border-[#5A2918] relative">
+            <div className="bg-[#FFF8EA] text-[#2A170F] rounded-2xl p-4 sm:p-8 shadow-2xl border-4 border-[#5A2918] relative">
               
               {/* Vintage Board Top Header */}
               <div className="border-b-2 border-[#3A170D]/20 pb-4 mb-6 flex items-center justify-between">

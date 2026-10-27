@@ -18,29 +18,29 @@ export const BrandIntro: React.FC = () => {
           <ScrollReveal animation="fade-right" duration={800} className="lg:col-span-7 space-y-6">
             
             {/* Number Tag (Requirement #8) */}
-            <div className="flex items-center gap-4">
-              <span className="font-serif text-5xl sm:text-6xl font-black text-[#C87932] tracking-tight">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <span className="font-serif text-4xl sm:text-5xl lg:text-6xl font-black text-[#C87932] tracking-tight">
                 01
               </span>
-              <div className="h-8 w-[2px] bg-[#C87932]/40"></div>
-              <span className="text-xs sm:text-sm font-serif font-bold tracking-widest text-[#5A2918] uppercase">
+              <div className="h-6 sm:h-8 w-[2px] bg-[#C87932]/40"></div>
+              <span className="text-[11px] sm:text-xs md:text-sm font-serif font-bold tracking-widest text-[#5A2918] uppercase">
                 COFFEE • SNACKS • GOOD TIMES
               </span>
             </div>
 
             {/* Headline */}
             <div>
-              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#21100A] leading-tight">
+              <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#21100A] leading-tight">
                 MORE THAN JUST A <br />
                 <span className="text-[#5A2918] italic">QUICK BITE.</span>
               </h2>
-              <div className="mt-2 w-48">
+              <div className="mt-2 w-44 sm:w-48">
                 <CurvedUnderline color="#C87932" width="100%" />
               </div>
             </div>
 
             {/* Supporting Copy */}
-            <p className="text-[#3A170D]/90 text-lg sm:text-xl font-sans leading-relaxed font-normal">
+            <p className="text-[#3A170D]/90 text-base sm:text-lg md:text-xl font-sans leading-relaxed font-normal">
               RaRa Cafe is a cosy stop for those little moments that deserve good coffee, something crispy and a little time to slow down.
             </p>
 

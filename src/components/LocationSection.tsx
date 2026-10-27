@@ -27,23 +27,23 @@ export const LocationSection: React.FC = () => {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-[#21100A] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#21100A] tracking-tight">
             DROP BY. GRAB A BITE.
           </h2>
           
-          <div className="mt-2 mx-auto w-44">
+          <div className="mt-2 mx-auto w-36 sm:w-44">
             <CurvedUnderline color="#C87932" width="100%" />
           </div>
 
-          <p className="mt-4 text-[#5A2918]/80 text-base font-sans">
+          <p className="mt-4 text-[#5A2918]/80 text-sm sm:text-base font-sans">
             Conveniently located on Rajiv Gandhi Salai (OMR), Karappakkam.
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* LEFT: Business Info Card (5 cols) */}
-          <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-5 flex flex-col justify-between bg-[#FFF8EA] rounded-2xl p-7 sm:p-8 shadow-xl border-2 border-[#5A2918]/25 space-y-6">
+          <ScrollReveal animation="fade-right" duration={850} className="lg:col-span-5 flex flex-col justify-between bg-[#FFF8EA] rounded-2xl p-5 sm:p-8 shadow-xl border-2 border-[#5A2918]/25 space-y-6">
             <div>
               {/* Cafe Identity Badge */}
               <div className="flex items-center gap-3 pb-5 border-b border-[#3A170D]/15">
@@ -172,17 +172,17 @@ export const LocationSection: React.FC = () => {
               ></iframe>
 
               {/* Floating Vintage Location Tag Card Overlay (Requirement #16) */}
-              <div className="absolute top-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-[#FFF8EA]/95 backdrop-blur-md rounded-xl p-4 shadow-2xl border-2 border-[#5A2918] pointer-events-auto">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-auto sm:top-4 sm:left-4 sm:right-auto sm:max-w-xs bg-[#FFF8EA]/95 backdrop-blur-md rounded-xl p-3 sm:p-4 shadow-2xl border-2 border-[#5A2918] pointer-events-auto">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#C87932] animate-pulse"></div>
-                  <h4 className="font-serif font-black text-sm text-[#21100A]">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#C87932] animate-pulse"></div>
+                  <h4 className="font-serif font-black text-xs sm:text-sm text-[#21100A]">
                     RA RA CAFE
                   </h4>
                 </div>
-                <p className="text-[11px] font-mono text-[#5A2918] mt-1 font-semibold">
+                <p className="text-[10px] sm:text-[11px] font-mono text-[#5A2918] mt-0.5 sm:mt-1 font-semibold">
                   Karappakkam, Rajiv Gandhi Salai (OMR)
                 </p>
-                <p className="text-[10px] text-[#5A2918]/70 mt-1 font-sans">
+                <p className="hidden sm:block text-[10px] text-[#5A2918]/70 mt-1 font-sans">
                   Opposite / near Natesan Avenue junction.
                 </p>
                 <a
