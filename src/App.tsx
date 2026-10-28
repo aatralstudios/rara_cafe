@@ -3,7 +3,6 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { ScrollToTop } from './components/ScrollToTop';
-import { TravellingCoffeeBean } from './components/TravellingCoffeeBean';
 import { MobileActionBar } from './components/MobileActionBar';
 import { Hero } from './components/Hero';
 import { BrandIntro } from './components/BrandIntro';
@@ -25,9 +24,6 @@ export const App: React.FC = () => {
 
       {/* Floating Scroll to Top Button */}
       <ScrollToTop />
-
-      {/* Interactive Coffee Bean Traveling down the page on scroll */}
-      <TravellingCoffeeBean />
 
       {/* 0. Branded Swift Loading Animation */}
       <LoadingScreen />
